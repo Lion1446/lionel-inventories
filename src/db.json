@@ -1,75 +1,512 @@
 {
   "ingredients": [
-    { "id": 1, "sku": "ING-001", "item": "Tomatoes", "category": "Vegetables", "lossTolerance": 2, "unit": "kg" },
-    { "id": 2, "sku": "ING-002", "item": "Olive Oil", "category": "Oils", "lossTolerance": 1, "unit": "liters" },
-    { "id": 3, "sku": "ING-003", "item": "Salt", "category": "Spices", "lossTolerance": 1, "unit": "kg" },
-    { "id": 4, "sku": "ING-004", "item": "Chicken Breast", "category": "Meat", "lossTolerance": 3, "unit": "kg" },
-    { "id": 5, "sku": "ING-005", "item": "Basil", "category": "Herbs", "lossTolerance": 5, "unit": "grams" },
-    { "id": 6, "sku": "ING-006", "item": "Parmesan Cheese", "category": "Dairy", "lossTolerance": 2, "unit": "kg" },
-    { "id": 7, "sku": "ING-007", "item": "Garlic", "category": "Vegetables", "lossTolerance": 4, "unit": "kg" },
-    { "id": 8, "sku": "ING-008", "item": "Black Pepper", "category": "Spices", "lossTolerance": 1, "unit": "kg" },
-    { "id": 9, "sku": "ING-009", "item": "Lemon Juice", "category": "Fruits", "lossTolerance": 3, "unit": "liters" },
-    { "id": 10, "sku": "ING-010", "item": "Butter", "category": "Dairy", "lossTolerance": 2, "unit": "kg" },
-    { "id": 11, "sku": "ING-011", "item": "Onions", "category": "Vegetables", "lossTolerance": 3, "unit": "kg" },
-    { "id": 12, "sku": "ING-012", "item": "Carrots", "category": "Vegetables", "lossTolerance": 2, "unit": "kg" },
-    { "id": 13, "sku": "ING-013", "item": "Cucumber", "category": "Vegetables", "lossTolerance": 4, "unit": "kg" },
-    { "id": 14, "sku": "ING-014", "item": "Mint", "category": "Herbs", "lossTolerance": 5, "unit": "grams" },
-    { "id": 15, "sku": "ING-015", "item": "Thyme", "category": "Herbs", "lossTolerance": 4, "unit": "grams" },
-    { "id": 16, "sku": "ING-016", "item": "Yogurt", "category": "Dairy", "lossTolerance": 2, "unit": "liters" },
-    { "id": 17, "sku": "ING-017", "item": "Honey", "category": "Sweeteners", "lossTolerance": 1, "unit": "liters" },
-    { "id": 18, "sku": "ING-018", "item": "Almonds", "category": "Nuts", "lossTolerance": 3, "unit": "kg" },
-    { "id": 19, "sku": "ING-019", "item": "Cashews", "category": "Nuts", "lossTolerance": 2, "unit": "kg" },
-    { "id": 20, "sku": "ING-020", "item": "Brown Sugar", "category": "Sweeteners", "lossTolerance": 1, "unit": "kg" },
-    { "id": 21, "sku": "ING-021", "item": "Baking Powder", "category": "Baking", "lossTolerance": 1, "unit": "kg" },
-    { "id": 22, "sku": "ING-022", "item": "Baking Soda", "category": "Baking", "lossTolerance": 1, "unit": "kg" },
-    { "id": 23, "sku": "ING-023", "item": "Milk", "category": "Dairy", "lossTolerance": 2, "unit": "liters" },
-    { "id": 24, "sku": "ING-024", "item": "Cream", "category": "Dairy", "lossTolerance": 2, "unit": "liters" },
-    { "id": 25, "sku": "ING-025", "item": "Eggs", "category": "Poultry", "lossTolerance": 3, "unit": "dozen" },
-    { "id": 26, "sku": "ING-026", "item": "Flour", "category": "Baking", "lossTolerance": 2, "unit": "kg" },
-    { "id": 27, "sku": "ING-027", "item": "Rice", "category": "Grains", "lossTolerance": 2, "unit": "kg" },
-    { "id": 28, "sku": "ING-028", "item": "Pasta", "category": "Grains", "lossTolerance": 2, "unit": "kg" },
-    { "id": 29, "sku": "ING-029", "item": "Soy Sauce", "category": "Condiments", "lossTolerance": 1, "unit": "liters" },
-    { "id": 30, "sku": "ING-030", "item": "Vinegar", "category": "Condiments", "lossTolerance": 1, "unit": "liters" },
-    { "id": 31, "sku": "ING-031", "item": "Mustard", "category": "Condiments", "lossTolerance": 1, "unit": "kg" },
-    { "id": 32, "sku": "ING-032", "item": "Ketchup", "category": "Condiments", "lossTolerance": 1, "unit": "kg" },
-    { "id": 33, "sku": "ING-033", "item": "Corn", "category": "Vegetables", "lossTolerance": 3, "unit": "kg" },
-    { "id": 34, "sku": "ING-034", "item": "Peas", "category": "Vegetables", "lossTolerance": 3, "unit": "kg" },
-    { "id": 35, "sku": "ING-035", "item": "Broccoli", "category": "Vegetables", "lossTolerance": 2, "unit": "kg" },
-    { "id": 36, "sku": "ING-036", "item": "Cauliflower", "category": "Vegetables", "lossTolerance": 2, "unit": "kg" },
-    { "id": 37, "sku": "ING-037", "item": "Bell Pepper", "category": "Vegetables", "lossTolerance": 3, "unit": "kg" },
-    { "id": 38, "sku": "ING-038", "item": "Spinach", "category": "Vegetables", "lossTolerance": 4, "unit": "kg" },
-    { "id": 39, "sku": "ING-039", "item": "Lettuce", "category": "Vegetables", "lossTolerance": 4, "unit": "kg" },
-    { "id": 40, "sku": "ING-040", "item": "Mushrooms", "category": "Vegetables", "lossTolerance": 3, "unit": "kg" },
-    { "id": 41, "sku": "ING-041", "item": "Strawberries", "category": "Fruits", "lossTolerance": 2, "unit": "kg" },
-    { "id": 42, "sku": "ING-042", "item": "Blueberries", "category": "Fruits", "lossTolerance": 2, "unit": "kg" },
-    { "id": 43, "sku": "ING-043", "item": "Apples", "category": "Fruits", "lossTolerance": 3, "unit": "kg" },
-    { "id": 44, "sku": "ING-044", "item": "Bananas", "category": "Fruits", "lossTolerance": 3, "unit": "kg" },
-    { "id": 45, "sku": "ING-045", "item": "Oranges", "category": "Fruits", "lossTolerance": 2, "unit": "kg" }
+    {
+      "id": 1,
+      "sku": "ING-001",
+      "item": "Tomatoes",
+      "category": "Vegetables",
+      "lossTolerance": 2,
+      "unit": "kg"
+    },
+    {
+      "id": 2,
+      "sku": "ING-002",
+      "item": "Olive Oil",
+      "category": "Oils",
+      "lossTolerance": 1,
+      "unit": "liters"
+    },
+    {
+      "id": 3,
+      "sku": "ING-003",
+      "item": "Salt",
+      "category": "Spices",
+      "lossTolerance": 1,
+      "unit": "kg"
+    },
+    {
+      "id": 4,
+      "sku": "ING-004",
+      "item": "Chicken Breast",
+      "category": "Meat",
+      "lossTolerance": 3,
+      "unit": "kg"
+    },
+    {
+      "id": 5,
+      "sku": "ING-005",
+      "item": "Basil",
+      "category": "Herbs",
+      "lossTolerance": 5,
+      "unit": "grams"
+    },
+    {
+      "id": 6,
+      "sku": "ING-006",
+      "item": "Parmesan Cheese",
+      "category": "Dairy",
+      "lossTolerance": 2,
+      "unit": "kg"
+    },
+    {
+      "id": 7,
+      "sku": "ING-007",
+      "item": "Garlic",
+      "category": "Vegetables",
+      "lossTolerance": 4,
+      "unit": "kg"
+    },
+    {
+      "id": 8,
+      "sku": "ING-008",
+      "item": "Black Pepper",
+      "category": "Spices",
+      "lossTolerance": 1,
+      "unit": "kg"
+    },
+    {
+      "id": 9,
+      "sku": "ING-009",
+      "item": "Lemon Juice",
+      "category": "Fruits",
+      "lossTolerance": 3,
+      "unit": "liters"
+    },
+    {
+      "id": 10,
+      "sku": "ING-010",
+      "item": "Butter",
+      "category": "Dairy",
+      "lossTolerance": 2,
+      "unit": "kg"
+    },
+    {
+      "id": 11,
+      "sku": "ING-011",
+      "item": "Onions",
+      "category": "Vegetables",
+      "lossTolerance": 3,
+      "unit": "kg"
+    },
+    {
+      "id": 12,
+      "sku": "ING-012",
+      "item": "Carrots",
+      "category": "Vegetables",
+      "lossTolerance": 2,
+      "unit": "kg"
+    },
+    {
+      "id": 13,
+      "sku": "ING-013",
+      "item": "Cucumber",
+      "category": "Vegetables",
+      "lossTolerance": 4,
+      "unit": "kg"
+    },
+    {
+      "id": 14,
+      "sku": "ING-014",
+      "item": "Mint",
+      "category": "Herbs",
+      "lossTolerance": 5,
+      "unit": "grams"
+    },
+    {
+      "id": 15,
+      "sku": "ING-015",
+      "item": "Thyme",
+      "category": "Herbs",
+      "lossTolerance": 4,
+      "unit": "grams"
+    },
+    {
+      "id": 16,
+      "sku": "ING-016",
+      "item": "Yogurt",
+      "category": "Dairy",
+      "lossTolerance": 2,
+      "unit": "liters"
+    },
+    {
+      "id": 17,
+      "sku": "ING-017",
+      "item": "Honey",
+      "category": "Sweeteners",
+      "lossTolerance": 1,
+      "unit": "liters"
+    },
+    {
+      "id": 18,
+      "sku": "ING-018",
+      "item": "Almonds",
+      "category": "Nuts",
+      "lossTolerance": 3,
+      "unit": "kg"
+    },
+    {
+      "id": 19,
+      "sku": "ING-019",
+      "item": "Cashews",
+      "category": "Nuts",
+      "lossTolerance": 2,
+      "unit": "kg"
+    },
+    {
+      "id": 20,
+      "sku": "ING-020",
+      "item": "Brown Sugar",
+      "category": "Sweeteners",
+      "lossTolerance": 1,
+      "unit": "kg"
+    },
+    {
+      "id": 21,
+      "sku": "ING-021",
+      "item": "Baking Powder",
+      "category": "Baking",
+      "lossTolerance": 1,
+      "unit": "kg"
+    },
+    {
+      "id": 22,
+      "sku": "ING-022",
+      "item": "Baking Soda",
+      "category": "Baking",
+      "lossTolerance": 1,
+      "unit": "kg"
+    },
+    {
+      "id": 23,
+      "sku": "ING-023",
+      "item": "Milk",
+      "category": "Dairy",
+      "lossTolerance": 2,
+      "unit": "liters"
+    },
+    {
+      "id": 24,
+      "sku": "ING-024",
+      "item": "Cream",
+      "category": "Dairy",
+      "lossTolerance": 2,
+      "unit": "liters"
+    },
+    {
+      "id": 25,
+      "sku": "ING-025",
+      "item": "Eggs",
+      "category": "Poultry",
+      "lossTolerance": 3,
+      "unit": "dozen"
+    },
+    {
+      "id": 26,
+      "sku": "ING-026",
+      "item": "Flour",
+      "category": "Baking",
+      "lossTolerance": 2,
+      "unit": "kg"
+    },
+    {
+      "id": 27,
+      "sku": "ING-027",
+      "item": "Rice",
+      "category": "Grains",
+      "lossTolerance": 2,
+      "unit": "kg"
+    },
+    {
+      "id": 28,
+      "sku": "ING-028",
+      "item": "Pasta",
+      "category": "Grains",
+      "lossTolerance": 2,
+      "unit": "kg"
+    },
+    {
+      "id": 29,
+      "sku": "ING-029",
+      "item": "Soy Sauce",
+      "category": "Condiments",
+      "lossTolerance": 1,
+      "unit": "liters"
+    },
+    {
+      "id": 30,
+      "sku": "ING-030",
+      "item": "Vinegar",
+      "category": "Condiments",
+      "lossTolerance": 1,
+      "unit": "liters"
+    },
+    {
+      "id": 31,
+      "sku": "ING-031",
+      "item": "Mustard",
+      "category": "Condiments",
+      "lossTolerance": 1,
+      "unit": "kg"
+    },
+    {
+      "id": 32,
+      "sku": "ING-032",
+      "item": "Ketchup",
+      "category": "Condiments",
+      "lossTolerance": 1,
+      "unit": "kg"
+    },
+    {
+      "id": 33,
+      "sku": "ING-033",
+      "item": "Corn",
+      "category": "Vegetables",
+      "lossTolerance": 3,
+      "unit": "kg"
+    },
+    {
+      "id": 34,
+      "sku": "ING-034",
+      "item": "Peas",
+      "category": "Vegetables",
+      "lossTolerance": 3,
+      "unit": "kg"
+    },
+    {
+      "id": 35,
+      "sku": "ING-035",
+      "item": "Broccoli",
+      "category": "Vegetables",
+      "lossTolerance": 2,
+      "unit": "kg"
+    },
+    {
+      "id": 36,
+      "sku": "ING-036",
+      "item": "Cauliflower",
+      "category": "Vegetables",
+      "lossTolerance": 2,
+      "unit": "kg"
+    },
+    {
+      "id": 37,
+      "sku": "ING-037",
+      "item": "Bell Pepper",
+      "category": "Vegetables",
+      "lossTolerance": 3,
+      "unit": "kg"
+    },
+    {
+      "id": 38,
+      "sku": "ING-038",
+      "item": "Spinach",
+      "category": "Vegetables",
+      "lossTolerance": 4,
+      "unit": "kg"
+    },
+    {
+      "id": 39,
+      "sku": "ING-039",
+      "item": "Lettuce",
+      "category": "Vegetables",
+      "lossTolerance": 4,
+      "unit": "kg"
+    },
+    {
+      "id": 40,
+      "sku": "ING-040",
+      "item": "Mushrooms",
+      "category": "Vegetables",
+      "lossTolerance": 3,
+      "unit": "kg"
+    },
+    {
+      "id": 41,
+      "sku": "ING-041",
+      "item": "Strawberries",
+      "category": "Fruits",
+      "lossTolerance": 2,
+      "unit": "kg"
+    },
+    {
+      "id": 42,
+      "sku": "ING-042",
+      "item": "Blueberries",
+      "category": "Fruits",
+      "lossTolerance": 2,
+      "unit": "kg"
+    },
+    {
+      "id": 43,
+      "sku": "ING-043",
+      "item": "Apples",
+      "category": "Fruits",
+      "lossTolerance": 3,
+      "unit": "kg"
+    },
+    {
+      "id": 44,
+      "sku": "ING-044",
+      "item": "Bananas",
+      "category": "Fruits",
+      "lossTolerance": 3,
+      "unit": "kg"
+    },
+    {
+      "id": 45,
+      "sku": "ING-045",
+      "item": "Oranges",
+      "category": "Fruits",
+      "lossTolerance": 2,
+      "unit": "kg"
+    },
+    {
+      "id": "ab77",
+      "item": "Beef Loaf",
+      "category": "Canned Goods",
+      "lossTolerance": 0,
+      "unit": "pc",
+      "sku": "NBV-542"
+    }
   ],
   "products": [
-    { "id": 1, "name": "Caesar Salad", "sku": "PROD-001", "category": "Salad", "price": 5.99 },
-    { "id": 2, "name": "Grilled Chicken", "sku": "PROD-002", "category": "Main Course", "price": 12.99 },
-    { "id": 3, "name": "Chocolate Cake", "sku": "PROD-003", "category": "Dessert", "price": 4.99 },
-    { "id": 4, "name": "Potato Chips", "sku": "PROD-004", "category": "Snack", "price": 3.49 }
+    {
+      "id": 1,
+      "name": "Caesar Salad",
+      "sku": "PROD-001",
+      "category": "Salad",
+      "price": 5.99
+    },
+    {
+      "id": 2,
+      "name": "Grilled Chicken",
+      "sku": "PROD-002",
+      "category": "Main Course",
+      "price": 12.99
+    },
+    {
+      "id": 3,
+      "name": "Chocolate Cake",
+      "sku": "PROD-003",
+      "category": "Dessert",
+      "price": 4.99
+    },
+    {
+      "id": 4,
+      "name": "Potato Chips",
+      "sku": "PROD-004",
+      "category": "Snack",
+      "price": 3.49
+    }
   ],
   "productItems": [
-    { "id": 1, "productID": 1, "ingredientID": 1, "quantity": 0.5 },
-    { "id": 2, "productID": 1, "ingredientID": 5, "quantity": 0.01 },
-    { "id": 3, "productID": 1, "ingredientID": 7, "quantity": 0.02 },
-    { "id": 4, "productID": 1, "ingredientID": 11, "quantity": 0.2 },
-    { "id": 5, "productID": 1, "ingredientID": 13, "quantity": 0.3 },
-    { "id": 6, "productID": 2, "ingredientID": 4, "quantity": 1 },
-    { "id": 7, "productID": 2, "ingredientID": 8, "quantity": 0.01 },
-    { "id": 8, "productID": 2, "ingredientID": 10, "quantity": 0.05 },
-    { "id": 9, "productID": 2, "ingredientID": 12, "quantity": 0.2 },
-    { "id": 10, "productID": 2, "ingredientID": 16, "quantity": 0.2 },
-    { "id": 11, "productID": 3, "ingredientID": 17, "quantity": 0.1 },
-    { "id": 12, "productID": 3, "ingredientID": 20, "quantity": 0.1 },
-    { "id": 13, "productID": 3, "ingredientID": 23, "quantity": 0.1 },
-    { "id": 14, "productID": 3, "ingredientID": 26, "quantity": 0.1 },
-    { "id": 15, "productID": 4, "ingredientID": 18, "quantity": 0.05 },
-    { "id": 16, "productID": 4, "ingredientID": 19, "quantity": 0.05 },
-    { "id": 17, "productID": 4, "ingredientID": 29, "quantity": 0.02 },
-    { "id": 18, "productID": 4, "ingredientID": 31, "quantity": 0.02 }
+    {
+      "id": 1,
+      "productID": 1,
+      "ingredientID": 1,
+      "quantity": 0.5
+    },
+    {
+      "id": 2,
+      "productID": 1,
+      "ingredientID": 5,
+      "quantity": 0.01
+    },
+    {
+      "id": 3,
+      "productID": 1,
+      "ingredientID": 7,
+      "quantity": 0.02
+    },
+    {
+      "id": 4,
+      "productID": 1,
+      "ingredientID": 11,
+      "quantity": 0.2
+    },
+    {
+      "id": 5,
+      "productID": 1,
+      "ingredientID": 13,
+      "quantity": 0.3
+    },
+    {
+      "id": 6,
+      "productID": 2,
+      "ingredientID": 4,
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "productID": 2,
+      "ingredientID": 8,
+      "quantity": 0.01
+    },
+    {
+      "id": 8,
+      "productID": 2,
+      "ingredientID": 10,
+      "quantity": 0.05
+    },
+    {
+      "id": 9,
+      "productID": 2,
+      "ingredientID": 12,
+      "quantity": 0.2
+    },
+    {
+      "id": 10,
+      "productID": 2,
+      "ingredientID": 16,
+      "quantity": 0.2
+    },
+    {
+      "id": 11,
+      "productID": 3,
+      "ingredientID": 17,
+      "quantity": 0.1
+    },
+    {
+      "id": 12,
+      "productID": 3,
+      "ingredientID": 20,
+      "quantity": 0.1
+    },
+    {
+      "id": 13,
+      "productID": 3,
+      "ingredientID": 23,
+      "quantity": 0.1
+    },
+    {
+      "id": 14,
+      "productID": 3,
+      "ingredientID": 26,
+      "quantity": 0.1
+    },
+    {
+      "id": 15,
+      "productID": 4,
+      "ingredientID": 18,
+      "quantity": 0.05
+    },
+    {
+      "id": 16,
+      "productID": 4,
+      "ingredientID": 19,
+      "quantity": 0.05
+    },
+    {
+      "id": 17,
+      "productID": 4,
+      "ingredientID": 29,
+      "quantity": 0.02
+    },
+    {
+      "id": 18,
+      "productID": 4,
+      "ingredientID": 31,
+      "quantity": 0.02
+    }
   ]
 }
