@@ -18,7 +18,6 @@ export const addIngredient = async (ingredient) => {
 };
 
 export const editIngredient = async (data) => {
-  console.log(data);
   return axiosInstance.patch(`/ingredients/${data.id}`, data);
 };
 

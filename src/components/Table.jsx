@@ -7,6 +7,8 @@ import { deleteIngredient, editIngredient } from '../services/ingredients';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import DeleteItemDialog from './DeleteItemDialog';
 import EditItemDialog from './EditItemDialog';
+import ContentPasteGoIcon from '@mui/icons-material/ContentPasteGo';
+
 
 const Table = ({ data, page }) => {
   const [openEdit, setOpenEdit] = useState(false);
@@ -15,7 +17,7 @@ const Table = ({ data, page }) => {
   const [openConfirmation, setOpenConfirmation] = useState(false);
   const queryClient = useQueryClient();
 
-  const handleOpenEdit = (id, row) => {
+  const handleOpenEditIngredient = (id, row) => {
     setSelectedRow(row);
     setOpenEdit(true);
     setSelectedID(id);
@@ -54,7 +56,7 @@ const Table = ({ data, page }) => {
       handleCloseEdit();
     },
     onError: (error) => {
-    //   console.log(error.message);
+      console.log(error.message);
     }
   });
 
@@ -63,7 +65,6 @@ const Table = ({ data, page }) => {
   };
 
   const handleEditIngredient = (data) => {
-    console.log(data);
     mutationEdit.mutate(data);
   }
   
@@ -79,7 +80,7 @@ const Table = ({ data, page }) => {
       flex: 1,
       renderCell: (params) => (
       <>
-        <IconButton onClick={() => handleOpenEdit(params.id, params.row)}>
+        <IconButton onClick={() => handleOpenEditIngredient(params.id, params.row)}>
         <EditIcon style={{ color: '#ACACAC' }} />
         </IconButton>
         <IconButton onClick={() => handleDeleteConfirmation(params.id)}>
@@ -89,31 +90,62 @@ const Table = ({ data, page }) => {
       ),
     },
     ] 
-    :[
+    :(page == "products") ? [
         { field: 'sku', headerName: 'SKU', flex: 1 },
         { field: 'name', headerName: 'ITEM', flex: 2 },
         { field: 'category', headerName: 'CATEGORY', flex: 1 },
         { field: 'price', headerName: 'PRICE', flex: 1 },
-        // { field: 'i', headerName: 'TOTAL', flex: 1 },
+        {
+          field: 'ingredients',
+          headerName: 'INGREDIENTS',
+          flex: 1,
+          renderCell: (params) => (
+          <>
+              <IconButton onClick={() => alert("Sorry. No support for viewing ingredients yet.")}>
+              <ContentPasteGoIcon style={{ color: '#ACACAC' }} />
+              </IconButton>
+          </>
+          ),
+        },
         {
             field: 'actions',
             headerName: 'ACTIONS',
             flex: 1,
             renderCell: (params) => (
             <>
-                <IconButton onClick={() => handleOpenEdit(params.id, params.row)}>
+                <IconButton onClick={() => alert("Sorry. No support for edit")}>
                 <EditIcon style={{ color: '#ACACAC' }} />
                 </IconButton>
-                <IconButton onClick={() => handleDeleteConfirmation(params.id)}>
+                <IconButton onClick={() => alert("Sorry. No support for delete")}>
                 <DeleteIcon style={{ color: '#ACACAC' }} />
                 </IconButton>
             </>
             ),
         },
-    ];
+    ]: [
+      { field: 'sku', headerName: 'SKU', flex: 1 },
+      { field: 'item', headerName: 'ITEM', flex: 2 },
+      { field: 'quantity', headerName: 'QUANTITY', flex: 1 },
+      { field: 'unit', headerName: 'UNIT', flex: 1 },
+      {
+          field: 'actions',
+          headerName: 'ACTIONS',
+          flex: 1,
+          renderCell: (params) => (
+          <>
+              <IconButton onClick={() => alert("Sorry. No support for edit")}>
+              <EditIcon style={{ color: '#ACACAC' }} />
+              </IconButton>
+              <IconButton onClick={() => alert("Sorry. No support for delete")}>
+              <DeleteIcon style={{ color: '#ACACAC' }} />
+              </IconButton>
+          </>
+          ),
+      },
+  ];
   
   return (
-    <div style={{ height: '80vh', width: '100%' }}>
+    <div style={{ minHeight: '200px', maxHeight: '70vh', width: '100%' }}>
       <DataGrid rows={data} columns={columns} />
       {selectedRow && (
         <EditItemDialog

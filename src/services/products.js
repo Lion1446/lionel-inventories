@@ -18,7 +18,6 @@ export const addProduct = async (product) => {
 };
 
 export const editProduct = async (data) => {
-  console.log(data.updatedProduct);
   return axiosInstance.patch(`/products/${data.updatedProduct.id}`, data.updatedProduct);
 };
 
