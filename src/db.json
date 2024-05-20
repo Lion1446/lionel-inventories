@@ -1,22 +1,6 @@
 {
   "ingredients": [
     {
-      "id": "1",
-      "sku": "ING-001",
-      "item": "Tomatoes",
-      "category": "Vegetables",
-      "lossTolerance": 2,
-      "unit": "kg"
-    },
-    {
-      "id": "2",
-      "sku": "ING-002",
-      "item": "Olive Oil",
-      "category": "Oils",
-      "lossTolerance": 1,
-      "unit": "liters"
-    },
-    {
       "id": "3",
       "sku": "ING-003",
       "item": "Salt",
@@ -377,35 +361,39 @@
       "sku": "MOD-002"
     },
     {
-      "id": "2226",
+      "id": "b59f",
       "item": "Beef Loaf",
       "category": "Canned Goods",
-      "lossTolerance": 0,
+      "lossTolerance": 1,
       "unit": "pc",
-      "sku": "BPA-560"
+      "sku": "NSJ-027"
     }
   ],
   "products": [
     {
-      "id": "1",
+      "id": 1,
+      "name": "Caesar Salad",
       "sku": "PROD-001",
       "category": "Salad",
       "price": 5.99
     },
     {
-      "id": "2",
+      "id": 2,
+      "name": "Grilled Chicken",
       "sku": "PROD-002",
       "category": "Main Course",
       "price": 12.99
     },
     {
-      "id": "3",
+      "id": 3,
+      "name": "Chocolate Cake",
       "sku": "PROD-003",
       "category": "Dessert",
       "price": 4.99
     },
     {
-      "id": "4",
+      "id": 4,
+      "name": "Potato Chips",
       "sku": "PROD-004",
       "category": "Snack",
       "price": 3.49

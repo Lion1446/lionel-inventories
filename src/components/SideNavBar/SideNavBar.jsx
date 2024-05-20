@@ -18,7 +18,7 @@ const SideNavBar = () => {
             <KitchenOutlinedIcon/>
             Ingredients
           </NavLink>        
-          <NavLink to="/products" end className={`nav-item ${linkClass}`}>
+          <NavLink to="/products" className={`nav-item ${linkClass}` }>
             <ShoppingBasketOutlinedIcon/>
             Products
           </NavLink>       

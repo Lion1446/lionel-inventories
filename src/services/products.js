@@ -7,23 +7,23 @@ const axiosInstance = axios.create({
   },
 });
 
-export const fetchIngredients = async () => {
-  const { data } = await axiosInstance.get('/ingredients');
+export const fetchProducts = async () => {
+  const { data } = await axiosInstance.get('/products');
   return data;
 };
 
-export const addIngredient = async (ingredient) => {
-  const ingredientWithSKU = { ...ingredient, sku: generateSKU() };
-  return axiosInstance.post('/ingredients', ingredientWithSKU);
+export const addProduct = async (product) => {
+  const productWithSKU = { ...product, sku: generateSKU() };
+  return axiosInstance.post('/products', productWithSKU);
 };
 
-export const editIngredient = async (data) => {
-  console.log(data);
-  return axiosInstance.patch(`/ingredients/${data.id}`, data);
+export const editProduct = async (data) => {
+  console.log(data.updatedProduct);
+  return axiosInstance.patch(`/products/${data.updatedProduct.id}`, data.updatedProduct);
 };
 
-export const deleteIngredient = async (id) => {
-  return axiosInstance.delete(`/ingredients/${id}`);
+export const deleteProduct = async (id) => {
+  return axiosInstance.delete(`/products/${id}`);
 };
 
 

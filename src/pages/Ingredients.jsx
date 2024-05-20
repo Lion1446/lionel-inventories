@@ -8,7 +8,6 @@ import AddItemDialog from '../components/AddItemDialog.jsx';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import CircularProgress from '@mui/material/CircularProgress';
 import { fetchIngredients, addIngredient } from '../services/ingredients.js';
-import EditItemDialog from '../components/EditItemDialog.jsx';
 
 
 const Ingredients = () => {
@@ -81,7 +80,7 @@ const Ingredients = () => {
         <SearchBar value={searchTerm} onChange={handleOnChange} />
         <Button onClick={handleOpenAdd} variant="contained" startIcon={<AddIcon />}>Add Item</Button>
       </div>
-      <Table isLoading={isLoading} data={filteredData} />
+      <Table page="ingredients" isLoading={isLoading} data={filteredData} />
       <AddItemDialog open={openAdd} handleSubmitButton={handleAddIngredient} handleCancelButton={handleCloseAdd} />
     </div>
   );

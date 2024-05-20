@@ -10,6 +10,7 @@ import SalesAndAuditPage from './pages/SalesAndAuditPage'
 import InventoryPage from './pages/InventoryPage'
 import MainLayout from './layouts/MainLayout';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
+import CreateProductPage from './pages/CreateProductPage';
 
 const queryClient = new QueryClient()
 const App = () => {
@@ -19,7 +20,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainLayout/>}>
           <Route index element={<Ingredients/>} />
-          <Route path="products" element={<ProductsPage/>} />
+          <Route path="products/">
+            <Route index element={<ProductsPage/>} />
+            <Route path="create" element={<CreateProductPage/>} />
+          </Route>
           <Route path="sales-and-audit" element={<SalesAndAuditPage/>} />
           <Route path="inventory" element={<InventoryPage/>} />
         </Route>

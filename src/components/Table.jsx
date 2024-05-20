@@ -3,11 +3,12 @@ import { DataGrid } from '@mui/x-data-grid';
 import IconButton from '@mui/material/IconButton';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { deleteIngredient } from '../services/ingredients';
+import { deleteIngredient, editIngredient } from '../services/ingredients';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import DeleteItemDialog from './DeleteItemDialog';
+import EditItemDialog from './EditItemDialog';
 
-const Table = ({ data }) => {
+const Table = ({ data, page }) => {
   const [openEdit, setOpenEdit] = useState(false);
   const [selectedID, setSelectedID] = useState(null);
   const [selectedRow, setSelectedRow] = useState(null);
@@ -35,11 +36,10 @@ const Table = ({ data }) => {
     setSelectedID(null);
   };
 
-  const mutation = useMutation({
+  const mutationDelete = useMutation({
     mutationFn: deleteIngredient,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['ingredients'] });
-      handleCloseEdit();
       handleCloseConfirmation();
     },
     onError: (error) => {
@@ -47,11 +47,27 @@ const Table = ({ data }) => {
     }
   });
 
+  const mutationEdit = useMutation({
+    mutationFn: editIngredient,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['ingredients'] });
+      handleCloseEdit();
+    },
+    onError: (error) => {
+    //   console.log(error.message);
+    }
+  });
+
   const handleDeleteIngredient = () => {
-    mutation.mutate(selectedID);
+    mutationDelete.mutate(selectedID);
   };
 
-  const columns = [
+  const handleEditIngredient = (data) => {
+    console.log(data);
+    mutationEdit.mutate(data);
+  }
+  
+  const columns = (page == "ingredients") ? [
     { field: 'sku', headerName: 'SKU', flex: 1 },
     { field: 'item', headerName: 'ITEM', flex: 2 },
     { field: 'category', headerName: 'CATEGORY', flex: 1 },
@@ -62,18 +78,40 @@ const Table = ({ data }) => {
       headerName: 'ACTIONS',
       flex: 1,
       renderCell: (params) => (
-        <>
-          <IconButton onClick={() => handleOpenEdit(params.id, params.row)}>
-            <EditIcon style={{ color: '#ACACAC' }} />
-          </IconButton>
-          <IconButton onClick={() => handleDeleteConfirmation(params.id)}>
-            <DeleteIcon style={{ color: '#ACACAC' }} />
-          </IconButton>
-        </>
+      <>
+        <IconButton onClick={() => handleOpenEdit(params.id, params.row)}>
+        <EditIcon style={{ color: '#ACACAC' }} />
+        </IconButton>
+        <IconButton onClick={() => handleDeleteConfirmation(params.id)}>
+        <DeleteIcon style={{ color: '#ACACAC' }} />
+        </IconButton>
+      </>
       ),
     },
-  ];
-
+    ] 
+    :[
+        { field: 'sku', headerName: 'SKU', flex: 1 },
+        { field: 'name', headerName: 'ITEM', flex: 2 },
+        { field: 'category', headerName: 'CATEGORY', flex: 1 },
+        { field: 'price', headerName: 'PRICE', flex: 1 },
+        // { field: 'i', headerName: 'TOTAL', flex: 1 },
+        {
+            field: 'actions',
+            headerName: 'ACTIONS',
+            flex: 1,
+            renderCell: (params) => (
+            <>
+                <IconButton onClick={() => handleOpenEdit(params.id, params.row)}>
+                <EditIcon style={{ color: '#ACACAC' }} />
+                </IconButton>
+                <IconButton onClick={() => handleDeleteConfirmation(params.id)}>
+                <DeleteIcon style={{ color: '#ACACAC' }} />
+                </IconButton>
+            </>
+            ),
+        },
+    ];
+  
   return (
     <div style={{ height: '80vh', width: '100%' }}>
       <DataGrid rows={data} columns={columns} />

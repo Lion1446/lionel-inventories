@@ -47,10 +47,10 @@
     { "id": 45, "sku": "ING-045", "item": "Oranges", "category": "Fruits", "lossTolerance": 2, "unit": "kg" }
   ],
   "products": [
-    { "id": 1, "sku": "PROD-001", "category": "Salad", "price": 5.99 },
-    { "id": 2, "sku": "PROD-002", "category": "Main Course", "price": 12.99 },
-    { "id": 3, "sku": "PROD-003", "category": "Dessert", "price": 4.99 },
-    { "id": 4, "sku": "PROD-004", "category": "Snack", "price": 3.49 }
+    { "id": 1, "name": "Caesar Salad", "sku": "PROD-001", "category": "Salad", "price": 5.99 },
+    { "id": 2, "name": "Grilled Chicken", "sku": "PROD-002", "category": "Main Course", "price": 12.99 },
+    { "id": 3, "name": "Chocolate Cake", "sku": "PROD-003", "category": "Dessert", "price": 4.99 },
+    { "id": 4, "name": "Potato Chips", "sku": "PROD-004", "category": "Snack", "price": 3.49 }
   ],
   "productItems": [
     { "id": 1, "productID": 1, "ingredientID": 1, "quantity": 0.5 },
