@@ -1,11 +1,13 @@
 import React from 'react'
-import SideNavBar from '../components/SideNavBar/SideNavBar'
 import { Outlet } from 'react-router-dom'
+import SideDrawer from '../components/SideDrawer'
+
+
 
 const MainLayout = () => {
   return (
     <div style={{display: 'flex'}}>
-        <SideNavBar />
+        <SideDrawer/>
         <Outlet style={{flex: 1}} />
     </div>
   )
